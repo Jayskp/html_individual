@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="style1.css" rel="stylesheet">
+    <title>Document</title>
+    <script>
+        function fun() {
+            var pat = /^[^_@]\w*/; // Revised pattern for username validation
+            var u = document.getElementById('u1').value;
+            var v = document.getElementById('p1').value;
+            if (v.length === 0 || u.length === 0) {
+                alert("Both must not be blank");
+            } else if (v.length < 6 || v.length > 12) {
+                alert('Password length must be between 6 to 12');
+            } else if (!pat.test(u)) {
+                alert("Enter valid username");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 id="Welcome"> Welcome to NutriPro</h1>
+        <br>
+        <h1>Login</h1>
+        <div class="input-text">
+            <input style="padding: 1rem;" type="text" placeholder="Username" id="u1">
+            <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-text">
+            <input style="padding: 1rem;" type="password" placeholder="Length must be 6 to 12 characters" id="p1">
+            <i class='bx bxs-lock-alt'></i>
+        </div>
+        <div class="remember-forgot">
+            <label>
+                <input type="checkbox">Remember me
+            </label>
+            <a href="#">Forgot password?</a>
+        </div>
+        <div>
+            <a href="NutriPro.html"></a>
+            <button type="submit" class="btn btn-primary" onclick="fun()">Login</button>
+        </div>
+       
+    </div>
+</body>
+
+</html>
