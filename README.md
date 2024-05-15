@@ -1,7 +1,7 @@
 
 # NutriPro Website
 
-•Used HTML,CSS,Bootstrap and JavaScript
+•Used HTML, CSS, Bootstrap and JavaScript
 
 
 # Screenshots
